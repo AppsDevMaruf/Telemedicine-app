@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/productFragment"
-        android:name="com.maruf.telemedicineapp.ProductFragment"
+        android:name="com.maruf.telemedicineapp.ui.ProductFragment"
         android:label="fragment_product"
         tools:layout="@layout/fragment_product" />
 </navigation>

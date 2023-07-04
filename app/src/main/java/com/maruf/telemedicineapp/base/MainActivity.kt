@@ -1,7 +1,8 @@
-package com.maruf.telemedicineapp
+package com.maruf.telemedicineapp.base
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.maruf.telemedicineapp.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
