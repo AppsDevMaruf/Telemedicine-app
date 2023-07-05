@@ -1,4 +1,4 @@
-package com.maruf.todo.utils
+package com.maruf.telemedicineapp.utils
 
 import android.graphics.Paint
 import android.widget.TextView

@@ -19,7 +19,6 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">5%</item>
     </style>
-    app:shapeAppearanceOverlay="@style/ShapeAppearance.Image.PILL"
 
     <style name="Theme.TelemedicineApp" parent="Base.Theme.TelemedicineApp" />
 </resources>
