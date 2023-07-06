@@ -4,4 +4,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="text_color">#1D3A62</color>
     <color name="bg_blue">#62CEF9</color>
+    <color name="bg_green">#4AC989</color>
+    <color name="bg_violet">#A28EEC</color>
+    <color name="bg_orange">#FF7070</color>
+    <color name="bg_pink">#FB80BA</color>
+    <color name="bg_yellow">#ECAC4A</color>
 </resources>

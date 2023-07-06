@@ -2,4 +2,12 @@
     <string name="app_name">Telemedicine app</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="product_brief">Product Brief</string>
+    <string name="memo_circular">Memo/Circular</string>
+    <string name="digital_wpm">Digital WPM</string>
+    <string name="exam_quiz">Exam/Quiz</string>
+    <string name="campaign">Campaign</string>
+    <string name="feedback">Feedback</string>
+    <string name="cycle_plan">Cycle Plan</string>
+    <string name="notice">Notice</string>
 </resources>
