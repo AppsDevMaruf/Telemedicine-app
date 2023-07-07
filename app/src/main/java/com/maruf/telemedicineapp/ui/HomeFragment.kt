@@ -1,4 +1,4 @@
-package com.maruf.telemedicineapp
+package com.maruf.telemedicineapp.ui
 
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.ImageView
@@ -6,6 +6,7 @@ import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
+import com.maruf.telemedicineapp.R
 import com.maruf.telemedicineapp.adapter.SliderAdapter
 import com.maruf.telemedicineapp.base.BaseFragment
 import com.maruf.telemedicineapp.databinding.FragmentHomeBinding
@@ -43,7 +44,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             indicators[i] = ImageView(requireActivity())
             indicators[i].apply {
                 this?.setImageDrawable(
-                    ContextCompat.getDrawable(requireActivity(),R.drawable.indicator_inactive)
+                    ContextCompat.getDrawable(requireActivity(), R.drawable.indicator_inactive)
                 )
                 this?.layoutParams = layoutParams
             }
@@ -58,9 +59,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         for (i in 0 until childCount){
             val imageView = binding.indicatorsContainer[i] as ImageView
             if (i == index) {
-                imageView.setImageDrawable(ContextCompat.getDrawable(requireActivity(),R.drawable.indicator_active))
+                imageView.setImageDrawable(ContextCompat.getDrawable(requireActivity(),
+                    R.drawable.indicator_active
+                ))
             }else{
-                imageView.setImageDrawable(ContextCompat.getDrawable(requireActivity(),R.drawable.indicator_inactive))
+                imageView.setImageDrawable(ContextCompat.getDrawable(requireActivity(),
+                    R.drawable.indicator_inactive
+                ))
             }
         }
 

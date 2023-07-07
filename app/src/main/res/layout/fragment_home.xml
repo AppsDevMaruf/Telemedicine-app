@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="16dp"
-            tools:context=".HomeFragment">
+            tools:context=".ui.HomeFragment">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -561,18 +561,19 @@
 
                 <View
                     android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:background="@drawable/buttom_nav_background"
-                    app:layout_constraintBottom_toBottomOf="@id/content_navbar"
-                    app:layout_constraintDimensionRatio="1:0.2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/content_navbar" />
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_nav"
+                    app:layout_constraintDimensionRatio="1:0.5"
+                    app:layout_constraintEnd_toEndOf="@+id/content_navbar"
+                    app:layout_constraintStart_toStartOf="@+id/content_navbar"
+                    app:layout_constraintTop_toTopOf="@+id/content_navbar"
+                    app:layout_constraintBottom_toBottomOf="@+id/content_navbar"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+
                     android:id="@+id/content_navbar"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="78dp"
                     android:background="@drawable/navbar_background"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -583,20 +584,32 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="-16dp"
-                        android:src="@drawable/home_btn"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/bg_blue_dark"
+                        android:padding="20dp"
+                        android:src="@drawable/home"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/shadow_home_btn"
+                        app:layout_constraintBottom_toBottomOf="@id/content_navbar"
+                        app:layout_constraintDimensionRatio="1:0.4"
+                        app:layout_constraintEnd_toEndOf="@+id/homeIcon"
+                        app:layout_constraintStart_toStartOf="@+id/homeIcon" />
 
                     <ImageView
                         style="@style/textStyle"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="32dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="32dp"
                         android:src="@drawable/ic_user_profile"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                       app:layout_constraintTop_toTopOf="parent"
-                        android:layout_marginEnd="50dp"
-                        app:layout_constraintBottom_toBottomOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
