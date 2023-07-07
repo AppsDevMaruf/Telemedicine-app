@@ -10,4 +10,6 @@
     <string name="feedback">Feedback</string>
     <string name="cycle_plan">Cycle Plan</string>
     <string name="notice">Notice</string>
+    <string name="products">Products</string>
+    <string name="survey">Survey</string>
 </resources>

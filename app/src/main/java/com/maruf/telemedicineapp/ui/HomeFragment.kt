@@ -5,6 +5,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import com.maruf.telemedicineapp.R
 import com.maruf.telemedicineapp.adapter.SliderAdapter
@@ -32,6 +33,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         })
         binding.sliderContainer.adapter = sliderAdapter
 
+    }
+
+    override fun setupNavigation() {
+        binding.contentProductBrief.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_productFragment)
+        }
     }
 
 
@@ -68,7 +75,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                 ))
             }
         }
-
 
     }
 

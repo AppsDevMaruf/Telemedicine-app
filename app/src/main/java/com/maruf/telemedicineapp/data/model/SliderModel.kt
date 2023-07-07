@@ -1,4 +1,4 @@
-package com.maruf.telemedicineapp.data.local
+package com.maruf.telemedicineapp.data.model
 
 
 data class SliderModel(

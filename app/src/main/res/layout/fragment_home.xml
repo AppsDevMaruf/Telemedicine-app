@@ -19,6 +19,7 @@
             tools:context=".ui.HomeFragment">
 
             <ImageView
+                android:id="@+id/notification"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="-16dp"
@@ -280,7 +281,7 @@
                                 style="@style/textStyle"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Survey"
+                                android:text="@string/survey"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/surveyIcon" />
@@ -585,7 +586,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginStart="20dp"
-                        android:background="@drawable/bg_blue_dark"
+                        android:background="@drawable/bg_blue_dark_circle"
                         android:padding="20dp"
                         android:src="@drawable/home"
                         app:layout_constraintBottom_toBottomOf="parent"

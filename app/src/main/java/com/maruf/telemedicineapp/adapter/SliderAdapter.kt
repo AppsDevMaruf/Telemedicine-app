@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import coil.load
-import com.maruf.telemedicineapp.data.local.SliderModel
+import com.maruf.telemedicineapp.data.model.SliderModel
 import com.maruf.telemedicineapp.databinding.SlideItemBinding
 
 class SliderAdapter : ListAdapter<SliderModel, SliderAdapter.SliderViewHolder>(Comparator) {
