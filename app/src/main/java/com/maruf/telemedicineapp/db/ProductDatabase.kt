@@ -7,7 +7,7 @@ import com.maruf.telemedicineapp.data.local.Product
 
 @Database(entities = [Product::class], version = 1, exportSchema = false)
 abstract class ProductDatabase : RoomDatabase() {
-    abstract fun itemDao(): ProductDao
+    abstract fun productDao(): ProductDao
 
     companion object {
         private var INSTANCE: ProductDatabase? = null

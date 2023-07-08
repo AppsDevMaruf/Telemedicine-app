@@ -17,13 +17,12 @@ class DatabaseModule {
     @Singleton
     fun provideDatabase(@ApplicationContext context: Context): ProductDatabase {
         return ProductDatabase.getInstance(context)
-
     }
 
     @Provides
     @Singleton
     fun provideProductDao(productDatabase: ProductDatabase): ProductDao {
-        return productDatabase.itemDao()
+        return productDatabase.productDao()
     }
 
 
