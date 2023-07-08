@@ -1,27 +1,27 @@
-package com.maruf.todo.db
+package com.maruf.telemedicineapp.db
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.maruf.todo.data.local.Todo
+import com.maruf.telemedicineapp.data.local.Product
 
-@Database(entities = [Todo::class], version = 1, exportSchema = false)
-abstract class ItemDatabase : RoomDatabase() {
-    abstract fun itemDao(): TodoDao
+@Database(entities = [Product::class], version = 1, exportSchema = false)
+abstract class ProductDatabase : RoomDatabase() {
+    abstract fun itemDao(): ProductDao
 
     companion object {
-        private var INSTANCE: ItemDatabase? = null
+        private var INSTANCE: ProductDatabase? = null
 
-        fun getInstance(context: Context): ItemDatabase {
+        fun getInstance(context: Context): ProductDatabase {
             if (INSTANCE == null) {
                 INSTANCE = Room.databaseBuilder(
                     context,
-                    ItemDatabase::class.java,
-                    "todo_database"
+                    ProductDatabase::class.java,
+                    "pm_database"
                 ).build()
-                return INSTANCE as ItemDatabase
+                return INSTANCE as ProductDatabase
             }else{
-                return INSTANCE as ItemDatabase
+                return INSTANCE as ProductDatabase
             }
         }
     }
