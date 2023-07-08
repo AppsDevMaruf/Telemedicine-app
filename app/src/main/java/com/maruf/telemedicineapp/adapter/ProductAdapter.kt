@@ -8,8 +8,9 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import coil.load
 import com.maruf.telemedicineapp.data.local.Product
 import com.maruf.telemedicineapp.databinding.ItemProductBinding
+import javax.inject.Inject
 
-class ProductAdapter : ListAdapter<Product, ProductAdapter.ProductViewHolder>(Comparator) {
+class ProductAdapter @Inject constructor() : ListAdapter<Product, ProductAdapter.ProductViewHolder>(Comparator) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
@@ -20,10 +21,11 @@ class ProductAdapter : ListAdapter<Product, ProductAdapter.ProductViewHolder>(Co
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         getItem(position)?.let {
-            holder.binding.productName.text = it.productSubtitle
-            holder.binding.productGroup.text = it.productImage
+            holder.binding.productName.text = it.productTitle
+            holder.binding.productGenerics.text = it.productSubtitle
             holder.binding.productDate.text = it.createdDate
-            holder.binding.productImg.load(it.ProductTitle)
+            holder.binding.productImg.load(it.productImage)
+
         }
 
     }

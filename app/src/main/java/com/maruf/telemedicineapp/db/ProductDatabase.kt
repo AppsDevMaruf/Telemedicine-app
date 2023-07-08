@@ -26,12 +26,3 @@ abstract class ProductDatabase : RoomDatabase() {
         }
     }
 }
-/*@Provides
-@Singleton
-fun provideAppDatabase(@ApplicationContext appContext: Context): AppDatabase {
-    return Room.databaseBuilder(
-        appContext,
-        AppDatabase::class.java,
-        "RssReader"
-    ).build()
-}*/

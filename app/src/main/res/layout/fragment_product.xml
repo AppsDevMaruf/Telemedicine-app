@@ -11,11 +11,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background"
+        android:scrollbars="none"
         tools:context=".ui.ProductFragment">
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:padding="16dp">
 
             <ImageView
@@ -59,20 +61,23 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/pageTitle" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_marginTop="-20dp"
+            <LinearLayout
                 android:id="@+id/content_search"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginTop="-20dp"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/productBanner">
 
 
                 <EditText
+                    android:id="@+id/searchET"
                     android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
+                    android:layout_weight="7"
                     android:background="@drawable/bg_search_bar"
                     android:drawableStart="@drawable/ic_search"
                     android:drawablePadding="8dp"
@@ -84,41 +89,45 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:id="@+id/filterBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginVertical="2dp"
+                    android:layout_weight="0.5"
                     android:background="@drawable/bg_blue_dark"
-                    android:padding="8dp"
+                    android:paddingHorizontal="4dp"
+                    android:paddingVertical="12dp"
                     android:src="@drawable/ic_filter"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/productRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/content_search"
-                app:layout_constraintBottom_toTopOf="@id/constraintLayout"
                 tools:listitem="@layout/item_product" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="12dp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/productRecyclerView">
 
                 <View
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/bg_nav"
                     app:layout_constraintBottom_toBottomOf="@+id/content_navbar"
@@ -129,13 +138,14 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/content_navbar"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="78dp"
                     android:background="@drawable/navbar_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="2">
 
                     <ImageView
                         android:id="@+id/homeIcon"
