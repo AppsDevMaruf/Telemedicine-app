@@ -6,10 +6,10 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import coil.load
-import com.maruf.telemedicineapp.data.model.SliderModel
+import com.maruf.telemedicineapp.data.local.Banner
 import com.maruf.telemedicineapp.databinding.SlideItemBinding
 
-class SliderAdapter : ListAdapter<SliderModel, SliderAdapter.SliderViewHolder>(Comparator) {
+class SliderAdapter : ListAdapter<Banner, SliderAdapter.SliderViewHolder>(Comparator) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SliderViewHolder {
@@ -30,17 +30,17 @@ class SliderAdapter : ListAdapter<SliderModel, SliderAdapter.SliderViewHolder>(C
 
     companion object {
         private val Comparator =
-            object : DiffUtil.ItemCallback<SliderModel>() {
+            object : DiffUtil.ItemCallback<Banner>() {
                 override fun areItemsTheSame(
-                    oldItem: SliderModel,
-                    newItem: SliderModel
+                    oldItem: Banner,
+                    newItem: Banner
                 ): Boolean {
                     return oldItem.id == newItem.id
                 }
 
                 override fun areContentsTheSame(
-                    oldItem: SliderModel,
-                    newItem: SliderModel
+                    oldItem: Banner,
+                    newItem: Banner
                 ): Boolean {
                     return oldItem == newItem
                 }

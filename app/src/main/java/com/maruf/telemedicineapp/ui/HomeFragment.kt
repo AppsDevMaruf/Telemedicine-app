@@ -12,7 +12,9 @@ import com.maruf.telemedicineapp.adapter.SliderAdapter
 import com.maruf.telemedicineapp.base.BaseFragment
 import com.maruf.telemedicineapp.databinding.FragmentHomeBinding
 import com.maruf.telemedicineapp.utils.Utils
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     private val sliderAdapter = SliderAdapter()
     override fun getFragmentView(): Int {

@@ -6,10 +6,10 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import coil.load
-import com.maruf.telemedicineapp.data.model.ProductModel
+import com.maruf.telemedicineapp.data.local.Product
 import com.maruf.telemedicineapp.databinding.ItemProductBinding
 
-class ProductAdapter : ListAdapter<ProductModel, ProductAdapter.ProductViewHolder>(Comparator) {
+class ProductAdapter : ListAdapter<Product, ProductAdapter.ProductViewHolder>(Comparator) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
@@ -20,10 +20,10 @@ class ProductAdapter : ListAdapter<ProductModel, ProductAdapter.ProductViewHolde
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         getItem(position)?.let {
-            holder.binding.productName.text = it.productName
-            holder.binding.productGroup.text = it.productGroup
-            holder.binding.productDate.text = it.productDate
-            holder.binding.productImg.load(it.productImg)
+            holder.binding.productName.text = it.productSubtitle
+            holder.binding.productGroup.text = it.productImage
+            holder.binding.productDate.text = it.createdDate
+            holder.binding.productImg.load(it.ProductTitle)
         }
 
     }
@@ -32,17 +32,17 @@ class ProductAdapter : ListAdapter<ProductModel, ProductAdapter.ProductViewHolde
 
     companion object {
         private val Comparator =
-            object : DiffUtil.ItemCallback<ProductModel>() {
+            object : DiffUtil.ItemCallback<Product>() {
                 override fun areItemsTheSame(
-                    oldItem: ProductModel,
-                    newItem: ProductModel
+                    oldItem: Product,
+                    newItem: Product
                 ): Boolean {
                     return oldItem.id == newItem.id
                 }
 
                 override fun areContentsTheSame(
-                    oldItem: ProductModel,
-                    newItem: ProductModel
+                    oldItem: Product,
+                    newItem: Product
                 ): Boolean {
                     return oldItem == newItem
                 }
