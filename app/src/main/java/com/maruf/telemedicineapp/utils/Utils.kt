@@ -45,7 +45,7 @@ object Utils {
             productSubtitle = "Paracetamol 500mg",
             productImage = "https://chaldn.com/_mpimage/napa-tablet-500mg-10-tablets?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D106095&q=low&v=1&m=400&webp=1",
             createdDate = "02 jun,2021",
-            stock = true
+            stock = false
         ),
         Product(
             id = 3,

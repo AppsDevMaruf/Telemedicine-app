@@ -12,4 +12,5 @@
     <string name="notice">Notice</string>
     <string name="products">Products</string>
     <string name="survey">Survey</string>
+    <string name="stock_out">stock out</string>
 </resources>
