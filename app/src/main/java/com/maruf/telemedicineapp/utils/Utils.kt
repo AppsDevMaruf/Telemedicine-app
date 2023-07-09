@@ -9,7 +9,7 @@ object Utils {
         Banner(
             id = 1,
             title = "Welcome Our Apps",
-            slideImg = "https://images.pexels.com/photos/1692693/pexels-photo-1692693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            slideImg = "https://firebasestorage.googleapis.com/v0/b/fir-test-d4ed2.appspot.com/o/background.png?alt=media&token=8c4ea6c0-d03b-4345-a4b1-8d98aa52c3f6"
         ),
         Banner(
             id = 2,
@@ -65,33 +65,33 @@ object Utils {
         ),
         Product(
             id = 5,
-            productTitle = "Surgel",
-            productSubtitle = "Esomeprazole Magnesium Trihydrate",
-            productImage = "https://epharma.com.bd/storage/app/public/1pw6NCLPzF81RxHPgc6LKmw8O7dy9F3POUBHPi63.jpg",
-            createdDate = "06 jun,2023",
+            productTitle = "Fexo",
+            productSubtitle = "Fexofenadine Hydrochloride",
+            productImage = "https://firebasestorage.googleapis.com/v0/b/fir-test-d4ed2.appspot.com/o/fexo-tablet-120mg-10-tablets.jpg?alt=media&token=31e01ff8-6d43-4297-9269-2a750887dc0e",
+            createdDate = "09 jun,2023",
             stock = true
         ),
         Product(
             id = 6,
-            productTitle = "Surgel",
-            productSubtitle = "Esomeprazole Magnesium Trihydrate",
-            productImage = "https://epharma.com.bd/storage/app/public/1pw6NCLPzF81RxHPgc6LKmw8O7dy9F3POUBHPi63.jpg",
-            createdDate = "06 jun,2023",
+            productTitle = "Don-A",
+            productSubtitle = "Dosage and administration",
+            productImage = "https://firebasestorage.googleapis.com/v0/b/fir-test-d4ed2.appspot.com/o/Don-A%2010%20mg%20Tablet-400x400.jpg?alt=media&token=38bffae7-80c0-4ff9-bc23-9b1d24642d88",
+            createdDate = "10 jun,2023",
             stock = true
         ),
         Product(
             id = 7,
-            productTitle = "Surgel",
-            productSubtitle = "Esomeprazole Magnesium Trihydrate",
-            productImage = "https://epharma.com.bd/storage/app/public/1pw6NCLPzF81RxHPgc6LKmw8O7dy9F3POUBHPi63.jpg",
-            createdDate = "06 jun,2023",
-            stock = true
+            productTitle = "Nomi",
+            productSubtitle = "Zolmitriptan",
+            productImage = "https://firebasestorage.googleapis.com/v0/b/fir-test-d4ed2.appspot.com/o/Screenshot_1.png?alt=media&token=b82e78c2-93d1-45df-97d3-5dcd97b365c6",
+            createdDate = "10 jun,2023",
+            stock = false
         ),
         Product(
             id = 8,
-            productTitle = "Surgel",
-            productSubtitle = "Esomeprazole Magnesium Trihydrate",
-            productImage = "https://epharma.com.bd/storage/app/public/1pw6NCLPzF81RxHPgc6LKmw8O7dy9F3POUBHPi63.jpg",
+            productTitle = "E-Cap",
+            productSubtitle = "Vitamin E (Alpha-tocopherol)",
+            productImage = "https://firebasestorage.googleapis.com/v0/b/fir-test-d4ed2.appspot.com/o/Screenshot_16.png?alt=media&token=0320761b-6279-4d2c-9073-235568f9a944",
             createdDate = "06 jun,2023",
             stock = true
         ),
