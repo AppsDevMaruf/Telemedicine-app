@@ -2,6 +2,7 @@ package com.maruf.telemedicineapp.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
@@ -12,7 +13,7 @@ import com.maruf.telemedicineapp.utils.gone
 import com.maruf.telemedicineapp.utils.show
 import javax.inject.Inject
 
-class ProductAdapter @Inject constructor() : ListAdapter<Product, ProductAdapter.ProductViewHolder>(Comparator) {
+class ProductAdapter @Inject constructor() : PagingDataAdapter<Product, ProductAdapter.ProductViewHolder>(Comparator) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
