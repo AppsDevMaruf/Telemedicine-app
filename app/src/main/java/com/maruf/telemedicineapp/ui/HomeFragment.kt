@@ -26,6 +26,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         sliderAdapter.submitList(Utils.sliderItems)
         setupIndicators()
         setCurrentIndicator(0)
+        binding.sliderContainer.adapter = sliderAdapter
         binding.sliderContainer.registerOnPageChangeCallback(object : OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
@@ -33,7 +34,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             }
 
         })
-        binding.sliderContainer.adapter = sliderAdapter
+
 
     }
 
