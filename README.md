@@ -1,6 +1,6 @@
 # 🔖 # Telemedicine-app -For a better health
 <h1>Apps Screen<h1>
-<img src=".\app\src\main\res\drawable/home.png" width="25%">
+<img src=".\app\src\main\res\drawable/home_screen.png" width="25%">
 <img src=".\app\src\main\res\drawable/product_breif.png" width="25%">
  <br/>
 A medicine delivery app allows consumers to order medicine online and get doorstep delivery. Buyers can choose from different options and reap the benefits of competitive pricing. Some pharmacy apps offer additional services like online booking of laboratory tests, preventive healthcare check-ups, etc
